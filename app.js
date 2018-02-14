@@ -11,7 +11,7 @@ var api = new ParseServer({
     fileKey: 'optionalFileKey',
     serverURL: 'http://localhost:8030/wp', // Don't forget to change to https if needed
     liveQuery: {
-        classNames: [' '],
+        classNames: ['Game'],
         redisURL: 'redis://127.0.0.1:6379'
     }
 });
@@ -24,7 +24,9 @@ var dashboard = new ParseDashboard({
             "serverURL": "http://localhost:8030/wp",
             "appId": "myAppId123456",
             "masterKey": "myMasterKey123456",
-            "appName": "MyApp"
+            "appName": "MyApp",
+            "javascriptKey": "1xoWtDkxw8oZvX3bzhdTuHU7KZB8SGZD9jWQ2V9p"
+
         }
     ]
 }, options);
