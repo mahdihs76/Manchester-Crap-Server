@@ -3,7 +3,7 @@ var ParseServer = require('parse-server').ParseServer;
 var ParseDashboard = require('parse-dashboard');
 var app = express();
 var api = new ParseServer({
-    databaseURI: 'mongodb://173.254.203.235:27017/devwp', // Connection string for your MongoDB database
+    databaseURI: 'mongodb://127.0.0.1:27017/devwp', // Connection string for your MongoDB database
     appId: 'myAppId123456',
     javascriptKey: '1xoWtDkxw8oZvX3bzhdTuHU7KZB8SGZD9jWQ2V9p',
     masterKey: 'myMasterKey123456', // Keep this key secret!
@@ -11,7 +11,7 @@ var api = new ParseServer({
     serverURL: 'http://173.254.203.235:8030/wp', // Don't forget to change to https if needed
     liveQuery: {
         classNames: ['Game'],
-        redisURL: 'redis://173.254.203.235:6379'
+        redisURL: 'redis://127.0.0.1:6379'
     }
 });
 
@@ -51,5 +51,5 @@ ParseServer.createLiveQueryServer(httpServer,  {
     websocketTimeout: 10 * 1000,
     cacheTimeout: 60 * 600 * 1000,
     logLevel: 'VERBOSE',
-    redisURL: 'redis://173.254.203.235:6379'
+    redisURL: 'redis://127.0.0.1:6379'
 });
